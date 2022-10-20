@@ -10,12 +10,11 @@ public class Store {
         this.catalog = new Hashtable<>();
     }
 
-    public int search(Flower flower) {
-        // Returns the amount of flowers finds in collection
+    public String search(Flower flower) {
         if (!catalog.containsKey(flower)) {
-            return 0;
+            return "There is this type of flower in the store.";
         }
-        return catalog.get(flower);
+        return ("There is" + catalog.get(flower) + "flowers of this type.");
     }
 
     public void add(Flower flower, int amount) {
